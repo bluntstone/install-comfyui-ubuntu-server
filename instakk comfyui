@@ -1,12 +1,16 @@
-#now lets install ComfyUI
+#lets install ComfyUI date Dec 28 2025
 sudo apt install python3.12-venv
 git clone https://github.com/comfyanonymous/ComfyUI.git
 cd ComfyUI/
 python3 -m venv venv
 source venv/bin/activate
 pip install -U pip setuptools wheel uv
-uv pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu130 uv pip install -r requirements.txt
+uv pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu130 
+uv pip install -r requirements.txt
 cd custom_nodes/
-git clone https://github.com/ltdrdata/ComfyUI-Manager.git git clone https://github.com/ClownsharkBatwing/RES4LYF.git cd RES4LYF/ uv pip install -r requirements.txt
+git clone https://github.com/ltdrdata/ComfyUI-Manager.git 
+git clone https://github.com/ClownsharkBatwing/RES4LYF.git
+cd RES4LYF/ 
+uv pip install -r requirements.txt
 cd ../..
 python main.py --listen #start up comfyui
